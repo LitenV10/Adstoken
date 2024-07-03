@@ -1,0 +1,20 @@
+name: aptible
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Deploy to Aptible
+      uses: aptible/aptible-deploy-action@v4
+      with:
+        type: git
+        app: anmafs2token
+        environment: anmafs2token
+        username: ${{ secrets.APTIBLE_USERNAME }}
+        password: ${{ secrets.APTIBLE_PASSWORD }}
