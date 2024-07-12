@@ -14,7 +14,7 @@ jobs:
       uses: aptible/aptible-deploy-action@v4
       with:
         type: git
-        app: anmafs2token
-        environment: anmafs2token
+        app: enmafs2token
+        environment: rohit
         username: ${{ secrets.APTIBLE_USERNAME }}
         password: ${{ secrets.APTIBLE_PASSWORD }}
